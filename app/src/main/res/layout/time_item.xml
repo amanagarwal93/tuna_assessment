@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10dp"
+    app:cardCornerRadius="@dimen/_5dp"
+    app:strokeColor="@color/light_green"
+    app:strokeWidth="@dimen/_2dp">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/time_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/_25dp"
+        android:paddingTop="@dimen/_15dp"
+        android:paddingEnd="@dimen/_25dp"
+        android:paddingBottom="@dimen/_15dp"
+        android:textColor="@color/black" />
+
+</com.google.android.material.card.MaterialCardView>

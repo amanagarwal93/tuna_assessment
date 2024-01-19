@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.escape_session.SessionFragment">
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/inner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/back_btn_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/back"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="@dimen/_18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/back_button"
+                app:layout_constraintStart_toEndOf="@id/back_button"
+                app:layout_constraintTop_toTopOf="@id/back_button" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/location_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginEnd="@dimen/_5dp"
+                android:src="@drawable/ic_location"
+                app:layout_constraintBottom_toBottomOf="@id/back_button"
+                app:layout_constraintEnd_toStartOf="@id/location_title"
+                app:layout_constraintTop_toTopOf="@id/back_button" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/location_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_20dp"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="@dimen/_18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/back_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/back_button" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/room_poster"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/room_title"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20dp"
+        android:layout_marginEnd="@dimen/_20dp"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="@dimen/_18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/room_poster"
+        app:layout_constraintTop_toTopOf="@id/room_poster" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/rating_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16sp"
+        app:layout_constraintStart_toStartOf="@id/room_title"
+        app:layout_constraintTop_toBottomOf="@id/room_title" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/time"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:drawableStart="@drawable/baseline_circle_24"
+        android:drawablePadding="@dimen/_10dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16sp"
+        app:layout_constraintBottom_toBottomOf="@id/rating_title"
+        app:layout_constraintStart_toEndOf="@id/rating_title"
+        app:layout_constraintTop_toTopOf="@id/rating_title" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/date_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20dp"
+        android:text="@string/choose_date"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/room_poster"
+        app:layout_constraintTop_toBottomOf="@id/room_poster" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/date_recycler_view"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20dp"
+        android:layout_marginEnd="@dimen/_20dp"
+        android:background="@color/light_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/room_poster"
+        app:layout_constraintTop_toBottomOf="@id/date_title"
+        tools:itemCount="2"
+        tools:listitem="@layout/date_item" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/time_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20dp"
+        android:text="@string/choose_time"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/room_poster"
+        app:layout_constraintTop_toBottomOf="@id/date_recycler_view" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/time_recycler_view"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20dp"
+        android:layout_marginEnd="@dimen/_20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/room_poster"
+        app:layout_constraintTop_toBottomOf="@id/time_title"
+        tools:itemCount="2"
+        tools:listitem="@layout/time_item" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/continue_btn"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_20dp"
+        android:layout_marginTop="@dimen/_30dp"
+        android:backgroundTint="@color/light_green"
+        android:padding="@dimen/_10dp"
+        android:text="@string/continue_btn"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

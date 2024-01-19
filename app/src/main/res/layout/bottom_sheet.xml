@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/close_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10dp"
+        android:layout_marginEnd="@dimen/_10dp"
+        android:background="@drawable/img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10dp"
+        android:layout_marginEnd="@dimen/_10dp"
+        app:cardCornerRadius="@dimen/_10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/close_icon">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_200dp"
+            android:scaleType="fitXY" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10dp"
+        android:layout_marginEnd="@dimen/_10dp"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/card_view"
+        app:layout_constraintTop_toTopOf="@id/card_view" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/calender_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10dp"
+        android:contentDescription="@null"
+        android:src="@drawable/baseline_calendar_month_24"
+        app:layout_constraintStart_toStartOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/time_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="sans-serif"
+        android:textSize="@dimen/_16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/calender_icon"
+        app:layout_constraintStart_toEndOf="@id/calender_icon"
+        app:layout_constraintTop_toTopOf="@id/calender_icon" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/user_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10dp"
+        android:layout_marginTop="@dimen/_10dp"
+        android:contentDescription="@null"
+        android:src="@drawable/baseline_person_24"
+        app:layout_constraintStart_toEndOf="@id/time_text"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/user_details"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5dp"
+        android:layout_marginEnd="@dimen/_10dp"
+        android:fontFamily="sans-serif"
+        android:textSize="@dimen/_16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/calender_icon"
+        app:layout_constraintStart_toEndOf="@id/user_icon"
+        app:layout_constraintTop_toTopOf="@id/calender_icon" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/heading"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10dp"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif"
+        android:maxLines="6"
+        android:textSize="@dimen/_16sp"
+        app:layout_constraintBottom_toBottomOf="@id/card_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/calender_icon"
+        app:layout_constraintTop_toBottomOf="@id/calender_icon" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/book_btn"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10dp"
+        android:backgroundTint="@color/light_green"
+        android:fontFamily="sans-serif"
+        android:padding="@dimen/_10dp"
+        android:text="@string/book_now"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:cornerRadius="@dimen/_6dp"
+        app:layout_constraintEnd_toStartOf="@id/more_text_view"
+        app:layout_constraintStart_toStartOf="@id/card_view"
+        app:layout_constraintTop_toBottomOf="@id/card_view" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/more_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_40dp"
+        android:layout_marginEnd="@dimen/_40dp"
+        android:fontFamily="sans-serif"
+        android:paddingStart="@dimen/_5dp"
+        android:paddingEnd="@dimen/_5dp"
+        android:text="@string/more"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/book_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/book_btn" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tool_tip"
+        android:layout_width="@dimen/_25dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20dp"
+        android:text="@string/i"
+        android:textColor="@color/light_green"
+        android:textSize="@dimen/_25sp"
+        android:textStyle="bold"
+        app:fontFamily="@font/monotype_corosiva"
+        app:layout_constraintBottom_toTopOf="@id/more_text_view"
+        app:layout_constraintEnd_toEndOf="@id/more_text_view"
+        app:layout_constraintStart_toStartOf="@id/more_text_view"
+        app:layout_constraintTop_toTopOf="@id/book_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

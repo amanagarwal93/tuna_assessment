@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">TunaAssignment</string>
+    <string name="join_the_magic">Join The Magic</string>
+    <string name="be_cinergy_elite">Be Cinergy ELITE!</string>
+    <string name="enjoy_a_free_popcorn_on_sign_up">Enjoy a free popcorn on sign up</string>
+    <string name="sub_heading">Enjoy a $5.00 Elite reward after 300 points to spend however your want</string>
+    <string name="enjoy_a_special_birthday_movie_ticket_offer">Enjoy a special birthday movie ticket offer</string>
+    <string name="special_offers">Enjoy exclusive content, sneak peaks, and special offers</string>
+    <string name="sign_in_now">Sign In Now!</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="don_t_have_an_account">Don\'t have an account ?</string>
+    <string name="escape_rooms">Escape Rooms</string>
+    <string name="Guest_login">Continue As Guest</string>
+    <string name="back">Back</string>
+    <string name="continue_btn">Continue</string>
+    <string name="minutes"> mins</string>
+    <string name="book_now">Book Now</string>
+    <string name="min">MIN</string>
+    <string name="location_not_available">Location not available</string>
+    <string name="location_permission_denied">Location permission denied</string>
+    <string name="i">i</string>
+    <string name="more">More</string>
+    <string name="choose_date">Choose Date</string>
+    <string name="choose_time">Choose Time</string>
+</resources>

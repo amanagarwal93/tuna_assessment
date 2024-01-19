@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.login.LoginFragment">
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_40dp"
+        android:scaleType="center"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20dp"
+        android:layout_marginTop="@dimen/_40dp"
+        android:text="@string/join_the_magic"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_logo" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5dp"
+        android:text="@string/be_cinergy_elite"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_40dp"
+        android:scaleType="center"
+        android:src="@drawable/baseline_star_24"
+        app:layout_constraintStart_toStartOf="@id/title_2"
+        app:layout_constraintTop_toBottomOf="@id/title_2" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/popcorn_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5dp"
+        android:text="@string/enjoy_a_free_popcorn_on_sign_up"
+        android:textColor="@color/black"
+        android:textColorHighlight="@color/black"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@id/star"
+        app:layout_constraintStart_toEndOf="@id/star"
+        app:layout_constraintTop_toTopOf="@id/star" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/star_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10dp"
+        android:scaleType="center"
+        android:src="@drawable/baseline_star_24"
+        app:layout_constraintStart_toStartOf="@id/title_2"
+        app:layout_constraintTop_toBottomOf="@id/star" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title_3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5dp"
+        android:layout_marginEnd="@dimen/_20dp"
+        android:text="@string/sub_heading"
+        android:textColor="@color/black"
+        android:textColorHighlight="@color/black"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@id/star_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/star_2"
+        app:layout_constraintTop_toTopOf="@id/star_2" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/star_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10dp"
+        android:scaleType="center"
+        android:src="@drawable/baseline_star_24"
+        app:layout_constraintStart_toStartOf="@id/title_2"
+        app:layout_constraintTop_toBottomOf="@id/star_2" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title_4"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5dp"
+        android:layout_marginEnd="@dimen/_20dp"
+        android:text="@string/enjoy_a_special_birthday_movie_ticket_offer"
+        android:textColor="@color/black"
+        android:textColorHighlight="@color/black"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@id/star_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/star_3"
+        app:layout_constraintTop_toTopOf="@id/star_3" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/star_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10dp"
+        android:scaleType="center"
+        android:src="@drawable/baseline_star_24"
+        app:layout_constraintStart_toStartOf="@id/title_2"
+        app:layout_constraintTop_toBottomOf="@id/star_3" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title_5"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5dp"
+        android:layout_marginEnd="@dimen/_20dp"
+        android:text="@string/special_offers"
+        android:textColor="@color/black"
+        android:textColorHighlight="@color/black"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@id/star_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/star_4"
+        app:layout_constraintTop_toTopOf="@id/star_4" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/sign_in_btn"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_80dp"
+        android:layout_marginEnd="@dimen/_80dp"
+        android:layout_marginBottom="@dimen/_30dp"
+        android:backgroundTint="@color/light_green"
+        android:padding="@dimen/_10dp"
+        android:text="@string/sign_in_now"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/no_account_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/no_account_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_10dp"
+        android:text="@string/don_t_have_an_account"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@id/sign_up_btn"
+        app:layout_constraintEnd_toEndOf="@id/sign_in_btn"
+        app:layout_constraintStart_toStartOf="@id/sign_in_btn" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/sign_up_btn"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_30dp"
+        android:backgroundTint="@color/light_green"
+        android:padding="@dimen/_10dp"
+        android:text="@string/sign_up"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/guest_btn"
+        app:layout_constraintEnd_toEndOf="@id/sign_in_btn"
+        app:layout_constraintStart_toStartOf="@id/sign_in_btn" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/guest_btn"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_30dp"
+        android:backgroundTint="@color/light_green"
+        android:padding="@dimen/_10dp"
+        android:text="@string/Guest_login"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/sign_up_btn"
+        app:layout_constraintStart_toStartOf="@id/sign_up_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

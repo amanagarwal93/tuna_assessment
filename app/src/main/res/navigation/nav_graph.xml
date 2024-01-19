@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.tunaassignment.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_escapeRoomFragment"
+            app:destination="@id/escapeRoomFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/escapeRoomFragment"
+        android:name="com.example.tunaassignment.ui.escapeRoom.EscapeRoomFragment"
+        android:label="fragment_escape_room"
+        tools:layout="@layout/fragment_escape_room">
+        <action
+            android:id="@+id/action_escapeRoomFragment_to_bottomSheetDialogFragment"
+            app:destination="@id/bottomSheetDialogFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/bottomSheetDialogFragment"
+        android:name="com.example.tunaassignment.ui.escapeRoom.BottomSheetDialogFragment"
+        android:label="BottomSheetDialogFragment">
+        <action
+            android:id="@+id/action_bottomSheetDialogFragment_to_sessionFragment"
+            app:destination="@id/sessionFragment" />
+
+    </dialog>
+    <fragment
+        android:id="@+id/sessionFragment"
+        android:name="com.example.tunaassignment.ui.escape_session.SessionFragment"
+        android:label="fragment_session"
+        tools:layout="@layout/fragment_session" />
+</navigation>
